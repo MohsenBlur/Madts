@@ -8,7 +8,9 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "moduleResolution": "node",
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "lib": ["dom", "esnext"],
+    "jsx": "react-jsx"
   },
   "include": ["src/**/*"]
 }
