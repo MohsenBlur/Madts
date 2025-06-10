@@ -12,6 +12,12 @@
   "scripts": {
     "build": "tsc -p tsconfig.json"
   },
+  "peerDependencies": {
+    "react": "^19.0.0"
+  },
+  "dependencies": {
+    "p5": "^2.0.0"
+  },
   "devDependencies": {
     "typescript": "^5"
   }

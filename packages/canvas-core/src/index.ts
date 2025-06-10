@@ -65,3 +65,6 @@ export function polygonPerimeter(points: Point[]): number {
   }
   return peri;
 }
+
+export { P5Canvas } from './P5Canvas';
+export type { Sketch } from './P5Canvas';

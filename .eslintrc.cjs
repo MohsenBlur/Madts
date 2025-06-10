@@ -9,7 +9,7 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
-    project: ['./apps/site/tsconfig.json'],
+    project: ['./apps/site/tsconfig.json', './packages/canvas-core/tsconfig.json'],
   },
   plugins: [
     '@typescript-eslint',
