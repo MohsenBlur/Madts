@@ -19,6 +19,10 @@
     "./trig-explorer": {
       "import": "./dist/trig-explorer/index.js",
       "types": "./dist/trig-explorer/index.d.ts"
+    },
+    "./conic-sections": {
+      "import": "./dist/conic-sections/index.js",
+      "types": "./dist/conic-sections/index.d.ts"
     }
   },
   "scripts": {
