@@ -8,6 +8,7 @@ const lessons = [
   { slug: 'transformations', title: 'Transformations' },
   { slug: 'trig-explorer', title: 'Trig Explorer' },
   { slug: 'conic-sections', title: 'Conic Sections' },
+  { slug: 'vectors-dot-product', title: 'Vectors & Dot Product' },
 ]
 
 export default function DemoList() {

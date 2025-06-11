@@ -23,6 +23,10 @@
     "./conic-sections": {
       "import": "./dist/conic-sections/index.js",
       "types": "./dist/conic-sections/index.d.ts"
+    },
+    "./vectors-dot-product": {
+      "import": "./dist/vectors-dot-product/index.js",
+      "types": "./dist/vectors-dot-product/index.d.ts"
     }
   },
   "scripts": {
