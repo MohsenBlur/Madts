@@ -1,10 +1,11 @@
 'use client'
 
-import React, { useState, useRef } from 'react'
+import * as React from 'react'
+import { useState, useRef } from 'react'
 import { areaRectangle, perimeterRectangle } from '@madts/canvas-core'
 import { InfoPanel } from '@madts/ui-kit'
 
-export default function SquareBuilder() {
+export default function SquareBuilder(): React.ReactElement {
   const [side, setSide] = useState(100)
   const [position, setPosition] = useState({ x: 50, y: 50 })
   const [dragging, setDragging] = useState(false)
@@ -13,7 +14,7 @@ export default function SquareBuilder() {
   const startOffset = useRef({ x: 0, y: 0 })
   const startSide = useRef(100)
 
-  function onPointerDown(e: React.PointerEvent<HTMLDivElement>) {
+  function onPointerDown(e: React.PointerEvent<HTMLDivElement>): void {
     e.preventDefault()
     setDragging(true)
     startPos.current = { x: e.clientX, y: e.clientY }
@@ -21,19 +22,19 @@ export default function SquareBuilder() {
     ;(e.target as Element).setPointerCapture(e.pointerId)
   }
 
-  function onPointerMove(e: React.PointerEvent<HTMLDivElement>) {
+  function onPointerMove(e: React.PointerEvent<HTMLDivElement>): void {
     if (!dragging) return
     const dx = e.clientX - startPos.current.x
     const dy = e.clientY - startPos.current.y
     setPosition({ x: startOffset.current.x + dx, y: startOffset.current.y + dy })
   }
 
-  function onPointerUp(e: React.PointerEvent<HTMLDivElement>) {
+  function onPointerUp(e: React.PointerEvent<HTMLDivElement>): void {
     setDragging(false)
     ;(e.target as Element).releasePointerCapture(e.pointerId)
   }
 
-  function onResizeDown(e: React.PointerEvent<HTMLDivElement>) {
+  function onResizeDown(e: React.PointerEvent<HTMLDivElement>): void {
     e.stopPropagation()
     setResizing(true)
     startPos.current = { x: e.clientX, y: e.clientY }
@@ -41,7 +42,7 @@ export default function SquareBuilder() {
     ;(e.target as Element).setPointerCapture(e.pointerId)
   }
 
-  function onResizeMove(e: React.PointerEvent<HTMLDivElement>) {
+  function onResizeMove(e: React.PointerEvent<HTMLDivElement>): void {
     if (!resizing) return
     const dx = e.clientX - startPos.current.x
     const dy = e.clientY - startPos.current.y
@@ -49,7 +50,7 @@ export default function SquareBuilder() {
     setSide(Math.max(10, startSide.current + delta))
   }
 
-  function onResizeUp(e: React.PointerEvent<HTMLDivElement>) {
+  function onResizeUp(e: React.PointerEvent<HTMLDivElement>): void {
     setResizing(false)
     ;(e.target as Element).releasePointerCapture(e.pointerId)
   }

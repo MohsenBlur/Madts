@@ -1,0 +1,29 @@
+{
+  "name": "@madts/demos",
+  "version": "0.1.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./area-perimeter": {
+      "import": "./dist/area-perimeter/index.js",
+      "types": "./dist/area-perimeter/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json"
+  },
+  "peerDependencies": {
+    "react": "^19.0.0"
+  },
+  "dependencies": {
+    "@madts/ui-kit": "workspace:*",
+    "@madts/canvas-core": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "^5"
+  }
+}
