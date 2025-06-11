@@ -6,6 +6,8 @@ import { useProgress } from '@madts/canvas-core'
 const lessons = [
   { slug: 'hello-shapes', title: 'Hello Shapes' },
   { slug: 'transformations', title: 'Transformations' },
+  { slug: 'trig-explorer', title: 'Trig Explorer' },
+  { slug: 'conic-sections', title: 'Conic Sections' },
 ]
 
 export default function DemoList() {
