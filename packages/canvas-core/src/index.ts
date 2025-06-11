@@ -69,3 +69,9 @@ export function polygonPerimeter(points: Point[]): number {
 export { P5Canvas } from './P5Canvas';
 export type { Sketch } from './P5Canvas';
 export { useProgress } from './useProgress';
+export {
+  useAchievements,
+  recordCompletion,
+  type AchievementState,
+  SPEED_BADGE,
+} from './useAchievements';
