@@ -1,48 +1,50 @@
-import { useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react';
+import { recordCompletion } from './useAchievements';
 
-const STORAGE_KEY = 'madts-progress'
+const STORAGE_KEY = 'madts-progress';
 
 function load(): string[] {
-  if (typeof window === 'undefined') return []
+  if (typeof window === 'undefined') return [];
   try {
-    const raw = localStorage.getItem(STORAGE_KEY)
-    if (!raw) return []
-    const data = JSON.parse(raw)
-    return Array.isArray(data) ? data : []
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (!raw) return [];
+    const data = JSON.parse(raw);
+    return Array.isArray(data) ? data : [];
   } catch {
-    return []
+    return [];
   }
 }
 
 export function useProgress() {
-  const [completed, setCompleted] = useState<string[]>([])
+  const [completed, setCompleted] = useState<string[]>([]);
 
   useEffect(() => {
-    setCompleted(load())
-  }, [])
+    setCompleted(load());
+  }, []);
 
   const save = useCallback((items: string[]) => {
-    setCompleted(items)
+    setCompleted(items);
     if (typeof window !== 'undefined') {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(items))
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(items));
     }
-  }, [])
+  }, []);
 
   const markComplete = useCallback(
     (slug: string) => {
-      if (completed.includes(slug)) return
-      const updated = [...completed, slug]
-      save(updated)
+      if (completed.includes(slug)) return;
+      const updated = [...completed, slug];
+      save(updated);
+      recordCompletion(slug);
     },
-    [completed, save]
-  )
+    [completed, save],
+  );
 
   const isCompleted = useCallback(
     (slug: string) => completed.includes(slug),
-    [completed]
-  )
+    [completed],
+  );
 
-  const reset = useCallback(() => save([]), [save])
+  const reset = useCallback(() => save([]), [save]);
 
-  return { completed, markComplete, isCompleted, reset }
+  return { completed, markComplete, isCompleted, reset };
 }
