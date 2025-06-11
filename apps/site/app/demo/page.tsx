@@ -3,7 +3,10 @@
 import Link from 'next/link'
 import { useProgress } from '@madts/canvas-core'
 
-const lessons = [{ slug: 'hello-shapes', title: 'Hello Shapes' }]
+const lessons = [
+  { slug: 'hello-shapes', title: 'Hello Shapes' },
+  { slug: 'transformations', title: 'Transformations' },
+]
 
 export default function DemoList() {
   const { isCompleted } = useProgress()
