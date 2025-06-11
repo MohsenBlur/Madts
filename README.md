@@ -5,7 +5,7 @@
 
 ![banner](docs/banner.png)
 
-[![Build](https://github.com/YOUR_USER/math-playground/actions/workflows/ci.yml/badge.svg)](https://github.com/YOUR_USER/math-playground/actions/workflows/ci.yml)
+[![Build](https://github.com/MohsenBlur/Madts/actions/workflows/ci.yml/badge.svg)](https://github.com/MohsenBlur/Madts/actions/workflows/ci.yml)
 [![Deploy](https://vercel.com/button)](https://math-playground.vercel.app)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
@@ -19,7 +19,7 @@ Math‑Playground is a **Next.js 15** + **TypeScript** monorepo that bundles a 
 <summary><strong>Try it in 30 seconds</strong></summary>
 
 ```bash
-npx create-next-app@latest math-playground --example https://github.com/YOUR_USER/math-playground
+npx create-next-app@latest math-playground --example https://github.com/MohsenBlur/Madts
 cd math-playground
 pnpm dev # open http://localhost:3000
 ```
@@ -72,7 +72,7 @@ math-playground/
 
 1. **Clone & install**
    ```bash
-   git clone https://github.com/YOUR_USER/math-playground.git
+   git clone https://github.com/MohsenBlur/Madts.git
    cd math-playground
    pnpm install
    ```
