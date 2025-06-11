@@ -7,6 +7,10 @@ const withMDX = nextMDX({
 
 const nextConfig: NextConfig = {
   pageExtensions: ['ts', 'tsx', 'mdx', 'md'],
+  i18n: {
+    locales: ['en'],
+    defaultLocale: 'en',
+  },
 }
 
 export default withMDX(nextConfig)
