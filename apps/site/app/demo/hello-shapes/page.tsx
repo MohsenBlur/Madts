@@ -1,5 +1,5 @@
 import Whiteboard from '../../components/Whiteboard'
-import SquareBuilder from './SquareBuilder'
+import SquareBuilder from '@madts/demos/area-perimeter'
 
 export default function HelloShapesPage() {
   return (
