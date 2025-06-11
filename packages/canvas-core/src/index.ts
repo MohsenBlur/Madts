@@ -68,3 +68,4 @@ export function polygonPerimeter(points: Point[]): number {
 
 export { P5Canvas } from './P5Canvas';
 export type { Sketch } from './P5Canvas';
+export { useProgress } from './useProgress';
