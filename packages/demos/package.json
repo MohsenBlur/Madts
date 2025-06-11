@@ -11,6 +11,10 @@
     "./area-perimeter": {
       "import": "./dist/area-perimeter/index.js",
       "types": "./dist/area-perimeter/index.d.ts"
+    },
+    "./transformations": {
+      "import": "./dist/transformations/index.js",
+      "types": "./dist/transformations/index.d.ts"
     }
   },
   "scripts": {
