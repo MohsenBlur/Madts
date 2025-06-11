@@ -15,6 +15,10 @@
     "./transformations": {
       "import": "./dist/transformations/index.js",
       "types": "./dist/transformations/index.d.ts"
+    },
+    "./trig-explorer": {
+      "import": "./dist/trig-explorer/index.js",
+      "types": "./dist/trig-explorer/index.d.ts"
     }
   },
   "scripts": {
