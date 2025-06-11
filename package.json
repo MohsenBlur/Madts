@@ -19,11 +19,14 @@
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^5.2.0",
     "prettier": "^3.5.3",
-    "vitest": "^3.2.3"
-    },
-    "scripts": {
+    "vitest": "^3.2.3",
+    "@playwright/test": "^1.41.2",
+    "typescript": "^5"
+  },
+  "scripts": {
       "lint": "ESLINT_USE_FLAT_CONFIG=false pnpm exec eslint \"**/*.{ts,tsx,mdx}\"",
       "format": "pnpm exec prettier \"**/*.{ts,tsx,mdx}\" --write",
-      "test": "vitest run"
-    }
+      "test": "vitest run",
+      "e2e": "playwright test"
   }
+}
