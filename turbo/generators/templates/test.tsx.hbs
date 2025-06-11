@@ -1,0 +1,10 @@
+import { describe, it, expect } from 'vitest'
+import React from 'react'
+import { renderToString } from 'react-dom/server'
+import {{ pascalCase slug }} from './{{kebabCase slug}}'
+
+describe('{{ pascalCase slug }}', () => {
+  it('renders', () => {
+    expect(renderToString(<{{ pascalCase slug }} />)).toContain('{{ pascalCase slug }} demo placeholder')
+  })
+})
