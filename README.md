@@ -83,6 +83,8 @@ math-playground/
 3. **Open** <http://localhost:3000> and drag out a *Square Builder*—area & perimeter update live.
 4. **Deploy**
    * Click the **Vercel** button above and follow the prompts (free tier OK).
+   * In your repository settings add `VERCEL_PROJECT_ID` and `VERCEL_ORG_ID` as
+     secrets so GitHub Actions can trigger preview and production deployments.
 
 ---
 
