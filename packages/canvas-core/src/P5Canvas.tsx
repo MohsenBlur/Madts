@@ -7,9 +7,9 @@ export type Sketch = (p: p5) => void;
  * React wrapper that mounts a p5 sketch and cleans up on unmount.
  * The sketch will reinitialize when the component is hot reloaded.
  */
-export function P5Canvas({ sketch }: { sketch: Sketch }): JSX.Element {
+export function P5Canvas({ sketch }: { sketch: Sketch }): React.JSX.Element {
   const containerRef = useRef<HTMLDivElement>(null);
-  const p5Ref = useRef<p5>();
+  const p5Ref = useRef<p5 | null>(null);
 
   useEffect(() => {
     if (!containerRef.current) return;
@@ -20,7 +20,7 @@ export function P5Canvas({ sketch }: { sketch: Sketch }): JSX.Element {
     return () => {
       // Cleanup the p5 instance on unmount or hot reload
       p5Ref.current?.remove();
-      p5Ref.current = undefined;
+      p5Ref.current = null;
     };
   }, [sketch]);
 

@@ -19,6 +19,9 @@
     "p5": "^2.0.0"
   },
   "devDependencies": {
+    "@types/p5": "^1.7.6",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
     "typescript": "^5"
   }
 }
