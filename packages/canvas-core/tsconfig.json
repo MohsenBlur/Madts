@@ -10,7 +10,14 @@
     "moduleResolution": "node",
     "skipLibCheck": true,
     "lib": ["dom", "esnext"],
-    "jsx": "react-jsx"
+    "jsx": "react",
+    "baseUrl": ".",
+    "paths": {
+      "p5": ["./node_modules/@types/p5"]
+    },
+    "types": [
+      "react"
+    ]
   },
   "include": ["src/**/*"]
 }
