@@ -76,12 +76,16 @@ math-playground/
    cd math-playground
    pnpm install
    ```
-2. **Run locally**
+2. **Build packages**
+   ```bash
+   pnpm build
+   ```
+3. **Run locally**
    ```bash
    pnpm dev   # localhost:3000
    ```
-3. **Open** <http://localhost:3000> and drag out a *Square Builder*—area & perimeter update live.
-4. **Deploy**
+4. **Open** <http://localhost:3000> and drag out a *Square Builder*—area & perimeter update live.
+5. **Deploy**
    * Click the **Vercel** button above and follow the prompts (free tier OK).
    * In your repository settings add `VERCEL_PROJECT_ID` and `VERCEL_ORG_ID` as
      secrets so GitHub Actions can trigger preview and production deployments.

@@ -25,9 +25,10 @@
     "typescript": "^5"
   },
   "scripts": {
-      "lint": "ESLINT_USE_FLAT_CONFIG=false pnpm exec eslint \"**/*.{ts,tsx,mdx}\"",
-      "format": "pnpm exec prettier \"**/*.{ts,tsx,mdx}\" --write",
-      "test": "vitest run",
-      "e2e": "playwright test"
+    "lint": "ESLINT_USE_FLAT_CONFIG=false pnpm exec eslint \"**/*.{ts,tsx,mdx}\"",
+    "format": "pnpm exec prettier \"**/*.{ts,tsx,mdx}\" --write",
+    "test": "vitest run",
+    "e2e": "playwright test",
+    "build": "pnpm -r --parallel build"
   }
 }
