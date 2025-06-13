@@ -1,5 +1,4 @@
 {
-  "rootDirectory": "apps/site",
   "buildCommand": "pnpm --filter site build",
   "devCommand": "pnpm --filter site dev",
   "installCommand": "pnpm install",
