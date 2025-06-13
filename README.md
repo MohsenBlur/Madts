@@ -6,7 +6,7 @@
 ![banner](docs/banner.png)
 
 [![Build](https://github.com/MohsenBlur/Madts/actions/workflows/ci.yml/badge.svg)](https://github.com/MohsenBlur/Madts/actions/workflows/ci.yml)
-[![Deploy](https://vercel.com/button)](https://math-playground.vercel.app)
+[![Deploy](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/MohsenBlur/Madts)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 ---
@@ -86,7 +86,7 @@ math-playground/
    ```
 4. **Open** <http://localhost:3000> and drag out a *Square Builder*—area & perimeter update live.
 5. **Deploy**
-   * Click the **Vercel** button above and follow the prompts (free tier OK).
+   * Click the **Deploy** button above to clone this repo to Vercel (free tier OK) and follow the prompts.
    * In your repository settings add `VERCEL_PROJECT_ID` and `VERCEL_ORG_ID` as
      secrets so GitHub Actions can trigger preview and production deployments.
 
